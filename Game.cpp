@@ -5,6 +5,8 @@ Game::Game()
 	, gameClock()
 {
 	window.setMouseCursorVisible(false);
+
+	SetupGame();
 }
 
 void Game::Run()
@@ -35,36 +37,40 @@ void Game::Run()
 			window.close();
 		}
 
-
 		// -----------------------------------------------
 		// Update Section
 		// -----------------------------------------------
-		// Get the time passed since the last frame and restart our game clock
-		sf::Time frameTime = gameClock.restart();
-		// TODO: Call update on all objects
-
+		Update();
 
 		// -----------------------------------------------
 		// Draw Section
 		// -----------------------------------------------
-		// Clear the window to a single colour
-		window.clear(sf::Color(20, 20, 20));
-		// Draw everything to the window
-		// Display the window contents on the screen
-		window.display();
+		Draw();
 	}
 }
 
 void Game::Draw()
 {
+	// Clear the window to a single colour
+	window.clear(sf::Color(20, 20, 20));
 
+	// TODO: Draw everything to the window
+	player.Draw(window);
+
+	// Display the window contents on the screen
+	window.display();
 }
 
 void Game::Update()
 {
+	// Get the time passed since last frame
+	sf::Time deltaTime = gameClock.restart();
 
+	// TODO: Call update on all objects
 }
 
 void Game::SetupGame()
 {
+	// These actions will happen every time the game is started or restarted
+	player.SetPosition(sf::Vector2f(100,window.getSize().y/2-50));
 }

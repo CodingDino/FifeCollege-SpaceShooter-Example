@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "Player.h"
 
 class Game
 {
@@ -26,7 +27,7 @@ private:
 	// Game Data
 	sf::RenderWindow window;
 	sf::Clock gameClock;
-	//Player player;
+	Player player;
 	//std::vector<Bullet> playerBullets;
 	//std::vector<Enemy> enemies;
 	//std::vector<Bullet> enemyBullets;
