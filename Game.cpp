@@ -67,6 +67,7 @@ void Game::Update()
 	sf::Time deltaTime = gameClock.restart();
 
 	// TODO: Call update on all objects
+	player.Update(deltaTime);
 }
 
 void Game::SetupGame()
