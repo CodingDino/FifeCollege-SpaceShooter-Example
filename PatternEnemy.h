@@ -8,7 +8,7 @@ public:
 
     // Constructors / Destructors
     PatternEnemy();
-    ~PatternEnemy();
+    virtual ~PatternEnemy();
 
 private:
 

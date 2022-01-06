@@ -8,7 +8,7 @@ public:
 
     // Constructors / Destructors
     ChaseEnemy();
-    ~ChaseEnemy();
+    virtual ~ChaseEnemy();
 
 private:
 

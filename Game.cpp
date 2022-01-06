@@ -81,6 +81,8 @@ void Game::Update()
 	{
 		stars[i]->Update(deltaTime);
 	}
+
+	enemy.Update(deltaTime);
 }
 
 void Game::SetupGame()
