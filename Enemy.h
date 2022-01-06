@@ -18,6 +18,7 @@ protected:
     // Enemy class functions
     void SetTarget(sf::Vector2f newTarget);
     bool GetArrivedAtTarget();
+    virtual void AI();
 
 private:
 

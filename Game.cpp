@@ -4,7 +4,7 @@ Game::Game()
 	: window	(sf::VideoMode::getDesktopMode(), "Space Shooter", sf::Style::Titlebar | sf::Style::Close)
 	, gameClock	()
 	, stars		()
-	, enemy		()
+	, enemy		(&player)
 {
 	window.setMouseCursorVisible(false);
 

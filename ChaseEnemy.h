@@ -1,5 +1,9 @@
 #pragma once
 #include "Enemy.h"
+
+// Forward Declaration
+class Player;
+
 class ChaseEnemy :
     public Enemy
 {
@@ -7,11 +11,18 @@ class ChaseEnemy :
 public:
 
     // Constructors / Destructors
-    ChaseEnemy();
+    ChaseEnemy(Player* newPlayer);
     virtual ~ChaseEnemy();
+
+protected:
+
+    // Enemy Functions
+    virtual void AI() override;
 
 private:
 
     static sf::Texture* chaseEnemyTexture;
+    Player* targetPlayer;
+
 };
 

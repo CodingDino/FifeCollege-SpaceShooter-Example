@@ -15,6 +15,10 @@ Enemy::~Enemy()
 
 void Enemy::Update(sf::Time deltaTime)
 {
+	// Call AI function
+	// This should call the correct version on sub-classes since it is virtual!
+	AI();
+
 	if (!arrivedAtTarget)
 	{
 		// Get target direction
@@ -53,4 +57,9 @@ void Enemy::SetTarget(sf::Vector2f newTarget)
 bool Enemy::GetArrivedAtTarget()
 {
 	return arrivedAtTarget;
+}
+
+void Enemy::AI()
+{
+	// Base class AI does nothing.
 }
