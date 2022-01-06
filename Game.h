@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "Player.h"
 #include "Star.h"
+#include "ChaseEnemy.h"
 
 class Game
 {
@@ -30,6 +31,7 @@ private:
 	sf::Clock gameClock;
 	Player player;
 	std::vector<Star*> stars;
+	ChaseEnemy enemy;
 	//std::vector<Bullet> playerBullets;
 	//std::vector<Enemy> enemies;
 	//std::vector<Bullet> enemyBullets;

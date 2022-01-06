@@ -4,6 +4,7 @@ Game::Game()
 	: window	(sf::VideoMode::getDesktopMode(), "Space Shooter", sf::Style::Titlebar | sf::Style::Close)
 	, gameClock	()
 	, stars		()
+	, enemy		()
 {
 	window.setMouseCursorVisible(false);
 
@@ -62,6 +63,7 @@ void Game::Draw()
 	}
 
 	player.Draw(window);
+	enemy.Draw(window);
 
 	// Display the window contents on the screen
 	window.display();
