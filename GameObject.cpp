@@ -28,6 +28,11 @@ void GameObject::Update(sf::Time deltaTime)
 	// then call this version alongside their own logic
 }
 
+sf::Vector2f GameObject::GetPosition()
+{
+	return position;
+}
+
 void GameObject::SetPosition(sf::Vector2f newPosition)
 {
 	position = newPosition;

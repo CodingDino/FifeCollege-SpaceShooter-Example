@@ -13,6 +13,7 @@ public:
 	virtual void Update(sf::Time deltaTime); // Mark virtual as we intend to override this later
 
 	// Getters and Setters
+	sf::Vector2f GetPosition();
 	void SetPosition(sf::Vector2f newPosition);
 	void SetVelocity(sf::Vector2f newVelocity);
 

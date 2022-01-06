@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Player.h"
+#include "Star.h"
 
 class Game
 {
@@ -28,10 +29,10 @@ private:
 	sf::RenderWindow window;
 	sf::Clock gameClock;
 	Player player;
+	std::vector<Star*> stars;
 	//std::vector<Bullet> playerBullets;
 	//std::vector<Enemy> enemies;
 	//std::vector<Bullet> enemyBullets;
-	//std::vector<Star> stars;
 	//float lastEnemySpawn;
 	//sf::Text scoreDisplay;
 	//sf::Text gameOverDisplay;
